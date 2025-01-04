@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/buraktelli/Projects/Week3-Private-Project/Week3-Private-Project/Week3-Private-Project.csproj": {}
+    "/Users/buraktelli/Desktop/PrivateProject/Week3-Private-Project/Week3-Private-Project.csproj": {}
   },
   "projects": {
-    "/Users/buraktelli/Projects/Week3-Private-Project/Week3-Private-Project/Week3-Private-Project.csproj": {
+    "/Users/buraktelli/Desktop/PrivateProject/Week3-Private-Project/Week3-Private-Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/buraktelli/Projects/Week3-Private-Project/Week3-Private-Project/Week3-Private-Project.csproj",
+        "projectUniqueName": "/Users/buraktelli/Desktop/PrivateProject/Week3-Private-Project/Week3-Private-Project.csproj",
         "projectName": "Week3-Private-Project",
-        "projectPath": "/Users/buraktelli/Projects/Week3-Private-Project/Week3-Private-Project/Week3-Private-Project.csproj",
+        "projectPath": "/Users/buraktelli/Desktop/PrivateProject/Week3-Private-Project/Week3-Private-Project.csproj",
         "packagesPath": "/Users/buraktelli/.nuget/packages/",
-        "outputPath": "/Users/buraktelli/Projects/Week3-Private-Project/Week3-Private-Project/obj/",
+        "outputPath": "/Users/buraktelli/Desktop/PrivateProject/Week3-Private-Project/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/buraktelli/.nuget/NuGet/NuGet.Config"
@@ -33,6 +33,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -54,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.402/RuntimeIdentifierGraph.json"
         }
       }
     }
