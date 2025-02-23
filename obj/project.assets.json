@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/buraktelli/Desktop/PrivateProject/Week3-Private-Project/Week3-Private-Project.csproj",
+      "projectUniqueName": "/Applications/PrivateProject/Week9-Private-Project/Week3-Private-Project.csproj",
       "projectName": "Week3-Private-Project",
-      "projectPath": "/Users/buraktelli/Desktop/PrivateProject/Week3-Private-Project/Week3-Private-Project.csproj",
+      "projectPath": "/Applications/PrivateProject/Week9-Private-Project/Week3-Private-Project.csproj",
       "packagesPath": "/Users/buraktelli/.nuget/packages/",
-      "outputPath": "/Users/buraktelli/Desktop/PrivateProject/Week3-Private-Project/obj/",
+      "outputPath": "/Applications/PrivateProject/Week9-Private-Project/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/buraktelli/.nuget/NuGet/NuGet.Config"
