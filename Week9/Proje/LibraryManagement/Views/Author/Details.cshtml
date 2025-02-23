@@ -1,0 +1,13 @@
+@model LibraryManagement.Models.Author
+
+<h2>Author Details</h2>
+
+<div>
+    <p><strong>First Name:</strong> @Model.FirstName</p>
+    <p><strong>Last Name:</strong> @Model.LastName</p>
+    <p><strong>Date of Birth:</strong> @Model.DateOfBirth.ToShortDateString()</p>
+</div>
+
+<a href="@Url.Action("Edit", "Author", new { id = Model.Id })">Edit</a> |
+<a href="@Url.Action("Delete", "Author", new { id = Model.Id })">Delete</a> |
+<a href="@Url.Action("List", "Author")">Back to List</a>

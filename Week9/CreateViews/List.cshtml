@@ -1,0 +1,11 @@
+@model IEnumerable<Book>
+@foreach (var book in Model)
+{
+    <div>
+        <h3>@book.Title</h3>
+        <p>@book.Author.FirstName @book.Author.LastName</p>
+        <p>@book.Genre - @book.PublishDate.ToShortDateString()</p>
+        <a href="@Url.Action("Details", "Book", new { id = book.Id })">View Details</a> | 
+        <a href="@Url.Action("Delete", "Book", new { id = book.Id })">Delete</a>
+    </div>
+}
