@@ -1,0 +1,77 @@
+/* Styling for LUMI Library Management System */
+/* Updated to use blue and navy tones */
+
+/* Navbar brand: Ensuring proper text wrapping and alignment */
+a.navbar-brand[b-wv7cbvbl38] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-word;
+  color: #d1e8ff;
+}
+
+/* Global anchor styling with blue color */
+a[b-wv7cbvbl38] {
+  color: #1e90ff; /* Bright blue */
+  text-decoration: none;
+}
+a:hover[b-wv7cbvbl38] {
+  color: #ffffff; /* White on hover */
+}
+
+/* Primary button styling with deep blue tones */
+.btn-primary[b-wv7cbvbl38] {
+  color: #fff;
+  background-color: #1e3c72; /* Dark navy blue */
+  border-color: #2a5298; /* Medium navy blue */
+}
+.btn-primary:hover[b-wv7cbvbl38] {
+  background-color: #2a5298;
+  border-color: #1e3c72;
+}
+
+/* Pills-style navigation with active state styling */
+.nav-pills .nav-link.active[b-wv7cbvbl38], .nav-pills .show > .nav-link[b-wv7cbvbl38] {
+  color: #fff;
+  background-color: #2a5298;
+  border-color: #1e3c72;
+}
+
+/* Border styles with a soft blue-gray color */
+.border-top[b-wv7cbvbl38] {
+  border-top: 1px solid #6c757d;
+}
+.border-bottom[b-wv7cbvbl38] {
+  border-bottom: 1px solid #6c757d;
+}
+
+/* Box shadow for soft elevation effects */
+.box-shadow[b-wv7cbvbl38] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .1);
+}
+
+/* Styling for policy acceptance button */
+button.accept-policy[b-wv7cbvbl38] {
+  font-size: 1rem;
+  line-height: inherit;
+  background-color: #1e3c72;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 8px 16px;
+  border: none;
+  transition: all 0.3s ease;
+}
+button.accept-policy:hover[b-wv7cbvbl38] {
+  background-color: #2a5298;
+}
+
+/* Footer Styling: Positioned at the bottom with navy background */
+.footer[b-wv7cbvbl38] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+  background-color: #1e3c72;
+  color: #ffffff;
+  text-align: center;
+}

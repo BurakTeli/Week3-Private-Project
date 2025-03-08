@@ -1,0 +1,86 @@
+@model BookViewModel
+
+@{
+    ViewData["Title"] = "Delete Book";
+}
+
+<!-- Delete Book Page Styling -->
+<style>
+    .form-container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 25px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .card-custom {
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #8B0000, #B22222);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+
+    .card-header-custom {
+        background: transparent;
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card-body-custom {
+        padding: 30px;
+    }
+
+    .btn-custom-danger {
+        background: #DC3545;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .btn-custom-danger:hover {
+        background: #C82333;
+        transform: translateY(-2px);
+    }
+
+    .btn-outline-custom {
+        background: transparent;
+        color: #DC3545;
+        border: 2px solid #DC3545;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-custom:hover {
+        background: #DC3545;
+        color: #fff;
+    }
+</style>
+
+<div class="form-container">
+    <div class="card-custom">
+        <div class="card-header-custom">
+            Delete Book
+        </div>
+        <div class="card-body-custom">
+            <p><strong>Book Name:</strong> @Model.Title</p>
+            <p><strong>Author:</strong> @Model.AuthorName</p>
+            <p><strong>Genre:</strong> @Model.Genre</p>
+        </div>
+    </div>
+
+    <form method="post" action="@Url.Action("DeleteConfirmed", "Book", new { id = Model.Id })">
+        <div class="d-flex justify-content-end mt-3">
+            <a href="@Url.Action("List", "Book")" class="btn-outline-custom me-2">Cancel</a>
+            <button type="submit" class="btn-custom-danger">Delete</button>
+        </div>
+    </form>
+</div>

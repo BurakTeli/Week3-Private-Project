@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- Home Page Styling -->
+<style>
+    .hero-section {
+        background: linear-gradient(135deg, #1D2B64 0%, #F8CDDA 100%);
+        color: #fff;
+        text-align: center;
+        padding: 150px 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto 20px;
+        line-height: 1.7;
+    }
+
+    .cta-button {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #FFD700;
+        color: #1D2B64;
+        border: none;
+        padding: 14px 28px;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 25px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        transition: transform 0.2s, box-shadow 0.2s;
+        margin-top: 20px;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+    }
+
+    .features-section {
+        padding: 80px 30px;
+        text-align: center;
+        background: #f4f4f4;
+        border-radius: 40px 40px 0 0;
+        margin-top: -120px;
+    }
+
+    .feature-card {
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        transition: transform 0.2s;
+        color: #222;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature-card h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #1D2B64;
+    }
+
+    .feature-card p {
+        font-size: 1rem;
+        color: #555;
+        margin: 0;
+    }
+</style>
+
+<div class="hero-section">
+    <h1>Welcome to Our Library</h1>
+    <p>How about getting to know me before the project?</p>
+    <a href="/Home/About" class="cta-button">Learn More</a>
+</div>
+
+<div class="features-section" id="features">
+    <div class="feature-card">
+        <h3>Ajda Pekkan Appreciation</h3>
+        <p>I'm a fan of Ajda Pekkan too, maybe not as much as Sertan Bozkuş, but still!</p>
+    </div>
+    
+    <div class="feature-card">
+        <h3>Hande Yener Also Deserves Love</h3>
+        <p>Even though we may not love her as much as we love Ajda Pekkan, we also like Hande Yener with Sertan Bozkuş!</p>
+    </div>
+    <div class="feature-card">
+        <h3>AI Over Everything</h3>
+        <p>Neither Hande Yener nor Ajda Pekkan – I love AI the most!</p>
+    </div>
+</div>

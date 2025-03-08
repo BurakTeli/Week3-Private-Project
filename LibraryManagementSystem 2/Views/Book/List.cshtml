@@ -1,0 +1,142 @@
+@model IEnumerable<LibraryManagementSystem.Models.BookViewModel>
+
+@{
+    ViewData["Title"] = "Book List";
+}
+
+<!-- Book List Page Styling -->
+<style>
+    .book-list-container {
+        max-width: 950px;
+        margin: 50px auto;
+        padding: 30px;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #2C3E50, #4CA1AF);
+        color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .book-list-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .book-list-header h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #FFD700;
+    }
+
+    .table-custom {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .table-custom thead {
+        background: #FFD700;
+        color: #2C3E50;
+    }
+
+    .table-custom th, .table-custom td {
+        padding: 12px;
+        text-align: center;
+    }
+
+    .table-custom tbody tr:nth-child(odd) {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-custom {
+        background: #FFD700;
+        color: #2C3E50;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+        background: #FF6B6B;
+        transform: translateY(-2px);
+    }
+
+    .btn-outline-custom {
+        background: transparent;
+        color: #FFD700;
+        border: 2px solid #FFD700;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-custom:hover {
+        background: #FFD700;
+        color: #2C3E50;
+    }
+</style>
+
+<div class="book-list-container">
+    <div class="book-list-header">
+        <h1>Available Books</h1>
+        <div>
+            <a asp-controller="Home" asp-action="Index" class="btn-outline-custom me-2" title="Back">
+                <i class="bi bi-arrow-left-circle"></i>
+            </a>
+            <a asp-controller="Book" asp-action="Create" class="btn-custom" title="Add New Book">
+                <i class="bi bi-plus-circle"></i>
+            </a>
+        </div>
+    </div>
+
+    <div>
+        <table class="table-custom">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Author</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var book in Model)
+                    {
+                        <tr>
+                            <td>@book.Title</td>
+                            <td>@book.Genre</td>
+                            <td>@book.AuthorName</td>
+                            <td>
+                                <a asp-controller="Book" asp-action="Details" asp-route-id="@book.Id"
+                                   class="btn-outline-custom me-2" title="View">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+                                <a asp-controller="Book" asp-action="Edit" asp-route-id="@book.Id"
+                                   class="btn-custom me-2" title="Edit">
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
+                                <a asp-controller="Book" asp-action="Delete" asp-route-id="@book.Id"
+                                   class="btn-custom" title="Delete">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="4" class="text-muted">No books found.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

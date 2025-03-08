@@ -1,0 +1,85 @@
+@model AuthorViewModel
+
+@{
+    ViewData["Title"] = "Delete Author";
+}
+
+<!-- Delete Author Page Styling -->
+<style>
+    .form-container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 25px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .card-custom {
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #8B0000, #B22222);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+
+    .card-header-custom {
+        background: transparent;
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card-body-custom {
+        padding: 30px;
+    }
+
+    .btn-custom-danger {
+        background: #DC3545;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .btn-custom-danger:hover {
+        background: #C82333;
+        transform: translateY(-2px);
+    }
+
+    .btn-outline-custom {
+        background: transparent;
+        color: #DC3545;
+        border: 2px solid #DC3545;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-custom:hover {
+        background: #DC3545;
+        color: #fff;
+    }
+</style>
+
+<div class="form-container">
+    <div class="card-custom">
+        <div class="card-header-custom">
+            Delete Author
+        </div>
+        <div class="card-body-custom">
+            <p><strong>Name Surname:</strong> @Model.FirstName @Model.LastName</p>
+            <p><strong>Date of Birth:</strong> @Model.DateOfBirth.ToShortDateString()</p>
+        </div>
+    </div>
+
+    <form method="post" action="@Url.Action("DeleteConfirmed", "Author", new { id = Model.Id })">
+        <div class="d-flex justify-content-end mt-3">
+            <a href="@Url.Action("List", "Author")" class="btn-outline-custom me-2">Cancel</a>
+            <button type="submit" class="btn-custom-danger">Delete</button>
+        </div>
+    </form>
+</div>

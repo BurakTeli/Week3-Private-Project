@@ -1,0 +1,128 @@
+@model LibraryManagementSystem.Models.AuthorViewModel
+
+@{
+    ViewData["Title"] = "Author Details";
+}
+
+<!-- Author Details Page Styling -->
+<style>
+    .form-container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 25px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .card-custom {
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #1D2671, #C33764);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+
+    .card-header-custom {
+        background: transparent;
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card-body-custom {
+        padding: 30px;
+    }
+
+    .detail-item {
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        color: #eee;
+    }
+
+    .detail-item strong {
+        color: #FFD700;
+    }
+
+    .table-custom {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        color: #fff;
+    }
+
+    .table-custom thead {
+        background: #FFD700;
+        color: #2C3E50;
+    }
+
+    .table-custom th, .table-custom td {
+        padding: 12px;
+        text-align: center;
+    }
+
+    .table-custom tbody tr:nth-child(odd) {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-outline-custom {
+        background: transparent;
+        color: #FFD700;
+        border: 2px solid #FFD700;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-custom:hover {
+        background: #FFD700;
+        color: #2C3E50;
+    }
+</style>
+
+<div class="form-container">
+    <div class="card-custom">
+        <div class="card-header-custom">
+            @Model.FirstName @Model.LastName Details
+        </div>
+        <div class="card-body-custom">
+            <div class="detail-item"><strong>Date of Birth:</strong> @Model.DateOfBirth.ToShortDateString()</div>
+
+            <div class="mt-3">
+                <h5 style="color: #FFD700; font-weight: 600;">Books</h5>
+                @if (Model.Books.Any())
+                {
+                    <table class="table-custom">
+                        <thead>
+                            <tr>
+                                <th>Book Name</th>
+                                <th>Genre</th>
+                                <th>Publish Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var book in Model.Books)
+                            {
+                                <tr>
+                                    <td>@book.Title</td>
+                                    <td>@book.Genre</td>
+                                    <td>@book.PublishDate.ToShortDateString()</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p class="detail-item text-muted">This author does not have any books yet.</p>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="mt-3 text-end">
+        <a asp-action="List" class="btn-outline-custom" title="Back">
+            <i class="bi bi-arrow-left-circle"></i>
+        </a>
+    </div>
+</div>

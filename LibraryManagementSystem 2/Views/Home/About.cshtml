@@ -1,0 +1,104 @@
+@{
+    ViewData["Title"] = "About";
+}
+
+<style>
+    .about-container {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 40px;
+        font-family: 'Poppins', sans-serif;
+        color: #222;
+        background: #f8f9fa;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #2c3e50;
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #444;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #2c3e50;
+        margin: 20px auto;
+    }
+
+    .about-section {
+        margin-bottom: 30px;
+    }
+
+    .contact-links a {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 15px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: #fff;
+        background: #2c3e50;
+        border-radius: 8px;
+        transition: 0.3s ease;
+    }
+
+    .contact-links a:hover {
+        background: #1a252f;
+    }
+</style>
+
+<div class="about-container">
+    <h1 class="about-title">Welcome to Our Space</h1>
+    <img src="https://media.licdn.com/dms/image/v2/D5603AQEvdot-82Tc2A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1715891872890?e=1746662400&v=beta&t=b3XQ6na8In4xqJ-jIansaZ15aJWnpf9Gp0nyLCK0d-A"
+        alt="Profile Image" class="profile-image-large">
+
+    <style>
+        .profile-image-large {
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+
+    <div class="about-section">
+        <h2>Who I Am</h2>
+        <p class="about-text">
+            I am Burak Telli, a 20-year-old university student currently working at a software company.
+            As a Full Stack Developer, I am a determined and ambitious person (sometimes a little *too* ambitious but
+            hey, passion is key, right?).
+        </p>
+    </div>
+
+    <div class="about-section">
+        <h2>What I Do</h2>
+        <p class="about-text">
+            At the age of 16, I won first place in TÜBİTAK for my work in artificial intelligence.
+            Later, during the pandemic, I started my own company and ran a short but valuable 8-month e-commerce
+            venture.
+            Throughout my university journey, I have worked with Otto Games, Ordulu Teknoloji, ON7 Yazılım, Atlaspad,
+            Badi Etkinlik,
+            and I am currently continuing my work at Ventura Yazılım.
+        </p>
+    </div>
+
+
+    <div class="contact-links">
+        <a href="https://github.com/BurakTeli">GitHub</a>
+        <a href="https://www.linkedin.com/in/burak-telli-840468280/">LinkedIn</a>
+    </div>
+</div>

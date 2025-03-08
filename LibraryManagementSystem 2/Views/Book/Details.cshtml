@@ -1,0 +1,81 @@
+@model LibraryManagementSystem.Models.BookViewModel
+
+@{
+    ViewData["Title"] = "Book Details";
+}
+
+<!-- Book Details Page Styling -->
+<style>
+    .form-container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 25px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .card-custom {
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #1D2671, #C33764);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+
+    .card-header-custom {
+        background: transparent;
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card-body-custom {
+        padding: 30px;
+    }
+
+    .detail-item {
+        margin-bottom: 12px;
+        font-size: 1.1rem;
+        color: #eee;
+    }
+
+    .detail-item strong {
+        color: #FFD700;
+    }
+
+    .btn-outline-custom {
+        background: transparent;
+        color: #FFD700;
+        border: 2px solid #FFD700;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-custom:hover {
+        background: #FFD700;
+        color: #2C3E50;
+    }
+</style>
+
+<div class="form-container">
+    <div class="card-custom">
+        <div class="card-header-custom">
+            @Model.Title Details
+        </div>
+        <div class="card-body-custom">
+            <div class="detail-item"><strong>Genre:</strong> @Model.Genre</div>
+            <div class="detail-item"><strong>Author:</strong> @Model.AuthorName</div>
+            <div class="detail-item"><strong>ISBN:</strong> @Model.ISBN</div>
+            <div class="detail-item"><strong>Publish Date:</strong> @Model.PublishDate.ToShortDateString()</div>
+            <div class="detail-item"><strong>Copies Available:</strong> @Model.CopiesAvailable</div>
+        </div>
+    </div>
+    <div class="mt-3 text-end">
+        <a href="@Url.Action("List", "Book")" class="btn-outline-custom" title="Back">
+            <i class="bi bi-arrow-left-circle"></i>
+        </a>
+    </div>
+</div>
