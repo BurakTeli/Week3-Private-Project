@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/buraktelli/Desktop/LibraryManagementSystem/LibraryManagementSystem/LibraryManagementSystem.csproj": {}
+    "/Applications/PrivateProject/Week9-Private-Project/LibraryManagementSystem/LibraryManagementSystem/LibraryManagementSystem.csproj": {}
   },
   "projects": {
-    "/Users/buraktelli/Desktop/LibraryManagementSystem/LibraryManagementSystem/LibraryManagementSystem.csproj": {
+    "/Applications/PrivateProject/Week9-Private-Project/LibraryManagementSystem/LibraryManagementSystem/LibraryManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/buraktelli/Desktop/LibraryManagementSystem/LibraryManagementSystem/LibraryManagementSystem.csproj",
+        "projectUniqueName": "/Applications/PrivateProject/Week9-Private-Project/LibraryManagementSystem/LibraryManagementSystem/LibraryManagementSystem.csproj",
         "projectName": "LibraryManagementSystem",
-        "projectPath": "/Users/buraktelli/Desktop/LibraryManagementSystem/LibraryManagementSystem/LibraryManagementSystem.csproj",
+        "projectPath": "/Applications/PrivateProject/Week9-Private-Project/LibraryManagementSystem/LibraryManagementSystem/LibraryManagementSystem.csproj",
         "packagesPath": "/Users/buraktelli/.nuget/packages/",
-        "outputPath": "/Users/buraktelli/Desktop/LibraryManagementSystem/LibraryManagementSystem/obj/",
+        "outputPath": "/Applications/PrivateProject/Week9-Private-Project/LibraryManagementSystem/LibraryManagementSystem/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/buraktelli/.nuget/NuGet/NuGet.Config"
